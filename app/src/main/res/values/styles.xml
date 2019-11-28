@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Theme.MyTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+		<item name="android:textColorPrimary">@color/black</item>
+		<item name="android:textColorSecondary">@color/black</item>
+		<item name="android:textColorHighlight">#ffffecb3</item>
+		<item name="android:editTextColor">@color/black</item>
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">#ffffc107</item>
+		<item name="colorControlNormal">@color/black</item>
+	</style>
+</resources>

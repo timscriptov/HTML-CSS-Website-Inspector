@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">HTML Website Inspector</string>
+	<string name="console">Type your commands here</string>
+	<string name="deleteSession">Delete session</string>
+	<string name="down">Down</string>
+	<string name="editContent">Edit Website Content</string>
+	<string name="general">General</string>
+	<string name="help">Help</string>
+	<string name="icon">Icon</string>
+	<string name="injecting_javascript_code">Injecting javascript code</string>
+	<string name="inspect_help">This feature allows you to inspect html elements and edit them. To inspect particular html element, touch this button, click on the html element and then the app will display the html code behind that element. To go back to normal browser behaviour just touch view in browser button.</string>
+	<string name="inspecting_elements">Inspecting elements</string>
+	<string name="inspectorMode">Inspector Mode</string>
+	<string name="javascriptconsole">Javascript Console Prototype</string>
+	<string name="loadSession">Load session</string>
+	<string name="manageSessions">Manage Sessions</string>
+	<string name="message">This feature allows you to inspect html elements and edit them. To inspect particular html element just touch it and the app will display the html code behind that element. To go back to web browser just touch the view in browser button.</string>
+	<string name="refresh">Refresh</string>
+	<string name="remove_ad">Remove ads</string>
+	<string name="request_desktop_version">Request desktop version</string>
+	<string name="request_desktop_versions">Request desktop version</string>
+	<string name="saveHTML">Save HTML</string>
+	<string name="saveSession">Save current session</string>
+	<string name="search">Search</string>
+	<string name="searchtags">Search Tags</string>
+	<string name="sharePageSource">Share Page Source</string>
+	<string name="this_application_main_purpose_is_to_allow_you_to_edit_html_code_in_real_time">This application main purpose is to allow you to edit HTML in real-time.</string>
+	<string name="to_inject_javascript_code_please_pick_javascript_console_prototype_from_the_menu_then_enter_your_javascript_code_without_at_the_end_to_inject_the_code_press_view_in_browser_button">"To inject javascript code please pick Javascript Console Prototype from the menu.
+		Then enter your javascript code without ; at the end. To inject the code press view in browser button."</string>
+	<string name="to_request_the_desktop_version_a_website_please_check_the_checkbox_and_then_load_the_site_you_want_to_view_in_the_desktop_mode">To request the desktop version a website please check the checkbox and then load the site you want to view in the desktop mode.</string>
+	<string name="up">Up</string>
+	<string name="viewHTML">Edit Page Source</string>
+	<string name="viewInBrowser">View In Browser</string>
+	<string name="view_elements">Edit Html Elements</string>
+	<string name="view_in_browser">View in browser. Press this button if you want to go back to the browser.</string>
+	<string name="appbar_scrolling_view_behavior">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+	<string name="appirater_rate_title">Like HTML/CSS Website Inspector?</string>
+	<string name="appirator_app_title">HTML/CSS Website Inspector</string>
+	<string name="appirator_market_url">market://details?id=%s</string>
+	<string name="appirator_message">Like our app? Share the love with a quick review.</string>
+	<string name="banner_ad_unit_id">ca-app-pub-5621653997791580/1739097950</string>
+	<string name="bottom_sheet_behavior">android.support.design.widget.BottomSheetBehavior</string>
+	<string name="character_counter_pattern">%1$d / %2$d</string>
+	<string name="password_toggle_content_description">Toggle password visibility</string>
+	<string name="path_password_eye">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
+	<string name="path_password_eye_mask_strike_through">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+	<string name="path_password_eye_mask_visible">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+	<string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
+</resources>

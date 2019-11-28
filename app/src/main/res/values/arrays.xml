@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="htmltags">
+		<item>&lt;a></item>
+		<item>&lt;div></item>
+		<item>&lt;img></item>
+		<item>&lt;table></item>
+		<item>&lt;ul></item>
+		<item>&lt;p></item>
+		<item>&lt;span></item>
+	</string-array>
+</resources>

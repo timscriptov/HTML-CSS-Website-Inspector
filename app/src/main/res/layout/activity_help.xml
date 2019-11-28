@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+
+	<TableLayout
+		android:paddingLeft="@dimen/activity_horizontal_margin"
+		android:paddingTop="@dimen/activity_vertical_margin"
+		android:paddingRight="@dimen/activity_horizontal_margin"
+		android:paddingBottom="@dimen/activity_vertical_margin"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<TableRow
+			android:background="#ffc10443"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:textSize="16.0sp"
+				android:textStyle="bold"
+				android:textColor="#fff4d4df"
+				android:padding="5.0dip"
+				android:layout_width="fill_parent"
+				android:text="@string/general"/>
+
+		</TableRow>
+
+		<TableRow
+			android:layout_gravity="left"
+			android:background="#ffcccccc"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:padding="5.0dip"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/this_application_main_purpose_is_to_allow_you_to_edit_html_code_in_real_time"/>
+
+		</TableRow>
+
+		<TableRow
+			android:background="#ffc10443"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:textSize="16.0sp"
+				android:textStyle="bold"
+				android:textColor="#fff4d4df"
+				android:padding="5.0dip"
+				android:layout_width="fill_parent"
+				android:text="@string/inspecting_elements"/>
+
+		</TableRow>
+
+		<TableRow
+			android:layout_gravity="left"
+			android:background="#fff4d4df"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+
+			<ImageView
+				android:layout_gravity="center"
+				android:layout_width="0.0dip"
+				android:layout_height="50.0dip"
+				android:layout_margin="5.0dip"
+				android:src="@drawable/ic_touch_app_white_48dp"
+				android:layout_weight="2.0"/>
+
+			<TextView
+				android:layout_gravity="right"
+				android:padding="5.0dip"
+				android:layout_width="0.0dip"
+				android:layout_height="wrap_content"
+				android:text="@string/inspect_help"
+				android:layout_weight="8.0"/>
+
+		</TableRow>
+
+		<TableRow
+			android:layout_gravity="left"
+			android:background="#ffcccccc"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+
+			<ImageView
+				android:layout_gravity="center"
+				android:layout_width="0.0dip"
+				android:layout_height="50.0dip"
+				android:layout_margin="5.0dip"
+				android:src="@drawable/ic_open_in_browser_white_48dp"
+				android:layout_weight="2.0"/>
+
+			<TextView
+				android:layout_gravity="right"
+				android:padding="5.0dip"
+				android:layout_width="0.0dip"
+				android:layout_height="wrap_content"
+				android:text="@string/view_in_browser"
+				android:layout_weight="8.0"/>
+
+		</TableRow>
+
+		<TableRow
+			android:background="#ffc10443"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:textSize="16.0sp"
+				android:textStyle="bold"
+				android:textColor="#fff4d4df"
+				android:padding="5.0dip"
+				android:layout_width="fill_parent"
+				android:text="@string/injecting_javascript_code"/>
+
+		</TableRow>
+
+		<TableRow
+			android:layout_gravity="left"
+			android:background="#fff4d4df"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:padding="5.0dip"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/to_inject_javascript_code_please_pick_javascript_console_prototype_from_the_menu_then_enter_your_javascript_code_without_at_the_end_to_inject_the_code_press_view_in_browser_button"/>
+
+		</TableRow>
+
+		<TableRow
+			android:background="#ffc10443"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:textSize="16.0sp"
+				android:textStyle="bold"
+				android:textColor="#fff4d4df"
+				android:padding="5.0dip"
+				android:layout_width="fill_parent"
+				android:text="@string/request_desktop_versions"/>
+
+		</TableRow>
+
+		<TableRow
+			android:layout_gravity="left"
+			android:background="#fff4d4df"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:padding="5.0dip"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/to_request_the_desktop_version_a_website_please_check_the_checkbox_and_then_load_the_site_you_want_to_view_in_the_desktop_mode"/>
+
+		</TableRow>
+
+	</TableLayout>
+
+</ScrollView>
+

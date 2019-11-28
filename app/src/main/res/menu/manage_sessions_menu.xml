@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item
+		android:id="@+id/saveSession"
+		android:title="@string/saveSession"
+		app:showAsAction="never" />
+	<item
+		android:id="@+id/loadSession"
+		android:title="@string/loadSession"
+		app:showAsAction="never" />
+	<item
+		android:id="@+id/deleteSession"
+		android:title="@string/deleteSession"
+		app:showAsAction="never" />
+</menu>

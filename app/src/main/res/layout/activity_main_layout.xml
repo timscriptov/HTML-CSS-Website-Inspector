@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:fitsSystemWindows="true"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+	<android.support.design.widget.AppBarLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:background="?colorPrimary"
+			android:layout_width="fill_parent"
+			android:layout_height="?actionBarSize">
+
+			<android.support.v7.widget.CardView
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_marginTop="8.0dip"
+				android:layout_marginBottom="8.0dip"
+				app:cardBackgroundColor="@color/white">
+
+				<EditText
+					android:textColor="@color/black"
+					android:id="@+id/searchfield"
+					android:background="@android:color/transparent"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:layout_margin="8.0dip"
+					android:text="www.google.com"
+					android:selectAllOnFocus="true"
+					android:inputType="textWebEmailAddress"
+					android:imeOptions="actionGo"/>
+
+			</android.support.v7.widget.CardView>
+
+		</android.support.v7.widget.Toolbar>
+
+	</android.support.design.widget.AppBarLayout>
+
+	<include
+		layout="@layout/activity_main"/>
+
+</android.support.design.widget.CoordinatorLayout>
+
