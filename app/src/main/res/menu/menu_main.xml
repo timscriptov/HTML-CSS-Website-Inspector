@@ -14,7 +14,7 @@
             app:showAsAction="ifRoom" />
         <item
             android:id="@+id/viewelements"
-            android:icon="@drawable/ic_cached_white_48dp"
+            android:icon="@drawable/ic_cached"
             android:title="@string/view_elements"
             app:showAsAction="never" />
         <item
@@ -25,17 +25,17 @@
             app:showAsAction="never" />
         <item
             android:id="@+id/refresh"
-            android:icon="@drawable/ic_cached_white_48dp"
+            android:icon="@drawable/ic_cached"
             android:title="@string/refresh"
             app:showAsAction="never" />
         <item
             android:id="@+id/manage"
-            android:icon="@drawable/ic_cached_white_48dp"
+            android:icon="@drawable/ic_cached"
             android:title="@string/manageSessions"
             app:showAsAction="never" />
         <item
             android:id="@+id/javascript_console_activity"
-            android:icon="@drawable/ic_cached_white_48dp"
+            android:icon="@drawable/ic_cached"
             android:title="@string/javascriptconsole"
             app:showAsAction="never" />
         <item

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.support:transition:25.4.0@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Apktool-android/gradle/caches/transforms-2/files-2.1/36c7be52738d62f1bcb09e5349dfcc3d/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../Apktool-android/gradle/caches/transforms-2/files-2.1/36c7be52738d62f1bcb09e5349dfcc3d/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../Apktool-android/gradle/caches/modules-2/files-2.1/com.android.support/transition/25.4.0/f3ae92c9755f8371520bf16cb3a0fd137a8425d4/transition-25.4.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

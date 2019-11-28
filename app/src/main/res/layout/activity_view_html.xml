@@ -12,21 +12,21 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             android:background="?colorPrimary">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginTop="8.0dip"
                 android:layout_marginBottom="8.0dip"
                 app:cardBackgroundColor="@color/white">
 
                 <EditText
                     android:id="@+id/searchfield"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_margin="8.0dip"
                     android:background="@android:color/transparent"
                     android:hint="@string/search"
@@ -46,4 +46,3 @@
     <include layout="@layout/content_view_html" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
-

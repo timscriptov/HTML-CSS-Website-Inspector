@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.support:support-compat:25.4.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/../Apktool-android/gradle/caches/transforms-2/files-2.1/53b5f59aa46a676a9dd2db20ff3b9c7f/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Apktool-android/gradle/caches/transforms-2/files-2.1/53b5f59aa46a676a9dd2db20ff3b9c7f/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../Apktool-android/gradle/caches/transforms-2/files-2.1/53b5f59aa46a676a9dd2db20ff3b9c7f/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../Apktool-android/gradle/caches/modules-2/files-2.1/com.android.support/support-compat/25.4.0/c2592e35bf6391e2ac64cfd02db9e2011c4d65b0/support-compat-25.4.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

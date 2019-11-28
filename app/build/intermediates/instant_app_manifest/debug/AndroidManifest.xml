@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mcal.websiteanalyzerpro"
+    android:targetSandboxVersion="2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="29" />
+    <!-- Неограниченный доступ к Интернету -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Просмотр сетевых подключений -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Изменение/удаление данных на USB-накопителе -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:testOnly="true"
+        android:theme="@style/Theme.MyTheme"
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="adjustResize" >
+        <activity
+            android:name="com.mcal.websiteanalyzerpro.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name" >
+            <intent-filter android:label="@string/app_name" >
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mcal.websiteanalyzerpro.ViewHtmlActivity"
+            android:label="@string/viewHTML"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.mcal.websiteanalyzerpro.SearchTagsActivity"
+            android:label="@string/searchtags"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.mcal.websiteanalyzerpro.JavaScriptConsoleActivity"
+            android:label="@string/searchtags"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.mcal.websiteanalyzerpro.ManageSessionsActivity"
+            android:label="@string/manageSessions"
+            android:windowSoftInputMode="stateHidden" />
+    </application>
+
+</manifest>

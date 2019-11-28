@@ -1,0 +1,4 @@
+#Thu Nov 28 22:22:57 MSK 2019
+base.0=C\:\\Users\\Admin\\Desktop\\AppProjects\\HTML-CSS-Website-Inspector\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

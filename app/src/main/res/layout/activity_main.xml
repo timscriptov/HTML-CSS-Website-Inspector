@@ -2,27 +2,27 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_root"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <RelativeLayout
         android:id="@+id/bac_dim_layout"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:alpha="0.5"
         android:background="#ff000000"
         android:visibility="gone" />
 
     <FrameLayout
         android:id="@+id/progressLayout"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="4.0dip">
 
         <ProgressBar
             android:id="@+id/progressBar1"
             style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="4.0dip"
             android:layout_gravity="center"
             android:indeterminate="false"
@@ -38,4 +38,3 @@
         android:background="@android:color/transparent" />
 
 </RelativeLayout>
-

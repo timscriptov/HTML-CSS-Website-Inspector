@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <TableLayout
@@ -12,12 +12,12 @@
         android:paddingBottom="@dimen/activity_vertical_margin">
 
         <TableRow
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ffc10443">
 
             <TextView
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:padding="5.0dip"
                 android:text="@string/general"
                 android:textColor="#fff4d4df"
@@ -27,7 +27,7 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:background="#ffcccccc">
@@ -41,12 +41,12 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ffc10443">
 
             <TextView
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:padding="5.0dip"
                 android:text="@string/inspecting_elements"
                 android:textColor="#fff4d4df"
@@ -56,7 +56,7 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:background="#fff4d4df">
@@ -80,7 +80,7 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:background="#ffcccccc">
@@ -91,7 +91,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="5.0dip"
                 android:layout_weight="2.0"
-                android:src="@drawable/ic_open_in_browser_white_48dp" />
+                android:src="@drawable/ic_open_in_browser" />
 
             <TextView
                 android:layout_width="0.0dip"
@@ -104,12 +104,12 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ffc10443">
 
             <TextView
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:padding="5.0dip"
                 android:text="@string/injecting_javascript_code"
                 android:textColor="#fff4d4df"
@@ -119,7 +119,7 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:background="#fff4d4df">
@@ -133,12 +133,12 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ffc10443">
 
             <TextView
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:padding="5.0dip"
                 android:text="@string/request_desktop_versions"
                 android:textColor="#fff4d4df"
@@ -148,7 +148,7 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:background="#fff4d4df">

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: net.htmlparser.jericho:jericho-html:3.4@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Apktool-android/gradle/caches/modules-2/files-2.1/net.htmlparser.jericho/jericho-html/3.4/799191f451f5a6910ce37b0147771489ab46fed/jericho-html-3.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../Apktool-android/gradle/caches/modules-2/files-2.1/net.htmlparser.jericho/jericho-html/3.4/969370443c1ddfc5b13fc3f4cbe3d207ebf05e96/jericho-html-3.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

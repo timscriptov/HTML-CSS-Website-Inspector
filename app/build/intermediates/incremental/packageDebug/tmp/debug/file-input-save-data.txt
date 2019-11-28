@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Thu Nov 28 22:22:57 MSK 2019
+0.baseType=DIRECTORY
+0.base=C\:\\Users\\Admin\\Desktop\\AppProjects\\HTML-CSS-Website-Inspector\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.path=classes.dex
+0.set=DEX
+count=1

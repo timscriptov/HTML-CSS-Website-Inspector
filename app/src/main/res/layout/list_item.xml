@@ -6,7 +6,7 @@
 
     <TextView
         android:id="@+id/product_name"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="true"
         android:onClick="onClick"
@@ -15,4 +15,3 @@
         android:textStyle="bold" />
 
 </LinearLayout>
-
