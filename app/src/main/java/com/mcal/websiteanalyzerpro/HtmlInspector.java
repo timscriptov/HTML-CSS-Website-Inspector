@@ -1,5 +1,6 @@
 package com.mcal.websiteanalyzerpro;
 
+import android.annotation.SuppressLint;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
@@ -13,6 +14,7 @@ public class HtmlInspector implements OnTouchListener {
         webViewHeight = height;
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     public boolean onTouch(View v, MotionEvent event) {
         if (event.getAction() == 0) {
             float x = event.getX();

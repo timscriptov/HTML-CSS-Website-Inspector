@@ -1,48 +1,46 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<menu
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	android:id="@+id/menu_main">
-	<group
-		android:id="@+id/main_menu_group">
-		<item
-			android:id="@+id/savehtml"
-			android:title="@string/sharePageSource"
-			app:showAsAction="never" />
-		<item
-			android:icon="@drawable/ic_touch_app_white_48dp"
-			android:id="@+id/inspectorMode"
-			android:title="@string/inspectorMode"
-			app:showAsAction="ifRoom" />
-		<item
-			android:icon="@drawable/ic_cached_white_48dp"
-			android:id="@+id/viewelements"
-			android:title="@string/view_elements"
-			app:showAsAction="never" />
-		<item
-			android:id="@+id/request_desktop"
-			android:visible="true"
-			android:title="@string/request_desktop_version"
-			android:checkable="true"
-			app:showAsAction="never" />
-		<item
-			android:icon="@drawable/ic_cached_white_48dp"
-			android:id="@+id/refresh"
-			android:title="@string/refresh"
-			app:showAsAction="never" />
-		<item
-			android:icon="@drawable/ic_cached_white_48dp"
-			android:id="@+id/manage"
-			android:title="@string/manageSessions"
-			app:showAsAction="never" />
-		<item
-			android:icon="@drawable/ic_cached_white_48dp"
-			android:id="@+id/javascript_console_activity"
-			android:title="@string/javascriptconsole"
-			app:showAsAction="never" />
-		<item
-			android:id="@+id/viewHTML"
-			android:title="@string/viewHTML"
-			app:showAsAction="never" />
-	</group>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu_main">
+    <group android:id="@+id/main_menu_group">
+        <item
+            android:id="@+id/savehtml"
+            android:title="@string/sharePageSource"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/inspectorMode"
+            android:icon="@drawable/ic_touch_app_white_48dp"
+            android:title="@string/inspectorMode"
+            app:showAsAction="ifRoom" />
+        <item
+            android:id="@+id/viewelements"
+            android:icon="@drawable/ic_cached_white_48dp"
+            android:title="@string/view_elements"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/request_desktop"
+            android:checkable="true"
+            android:title="@string/request_desktop_version"
+            android:visible="true"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/refresh"
+            android:icon="@drawable/ic_cached_white_48dp"
+            android:title="@string/refresh"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/manage"
+            android:icon="@drawable/ic_cached_white_48dp"
+            android:title="@string/manageSessions"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/javascript_console_activity"
+            android:icon="@drawable/ic_cached_white_48dp"
+            android:title="@string/javascriptconsole"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/viewHTML"
+            android:title="@string/viewHTML"
+            app:showAsAction="never" />
+    </group>
 </menu>

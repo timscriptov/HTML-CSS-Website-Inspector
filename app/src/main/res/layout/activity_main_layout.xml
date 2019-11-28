@@ -1,49 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	android:fitsSystemWindows="true"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	app:layout_behavior="@string/appbar_scrolling_view_behavior">
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-	<android.support.design.widget.AppBarLayout
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
-		<android.support.v7.widget.Toolbar
-			android:id="@+id/toolbar"
-			android:background="?colorPrimary"
-			android:layout_width="fill_parent"
-			android:layout_height="?actionBarSize">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize"
+            android:background="?colorPrimary">
 
-			<android.support.v7.widget.CardView
-				android:layout_width="fill_parent"
-				android:layout_height="fill_parent"
-				android:layout_marginTop="8.0dip"
-				android:layout_marginBottom="8.0dip"
-				app:cardBackgroundColor="@color/white">
+            <androidx.cardview.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="8.0dip"
+                android:layout_marginBottom="8.0dip"
+                app:cardBackgroundColor="@color/white">
 
-				<EditText
-					android:textColor="@color/black"
-					android:id="@+id/searchfield"
-					android:background="@android:color/transparent"
-					android:layout_width="fill_parent"
-					android:layout_height="fill_parent"
-					android:layout_margin="8.0dip"
-					android:text="www.google.com"
-					android:selectAllOnFocus="true"
-					android:inputType="textWebEmailAddress"
-					android:imeOptions="actionGo"/>
+                <EditText
+                    android:id="@+id/searchfield"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="8.0dip"
+                    android:background="@android:color/transparent"
+                    android:imeOptions="actionGo"
+                    android:inputType="textWebEmailAddress"
+                    android:selectAllOnFocus="true"
+                    android:text="www.google.com"
+                    android:textColor="@color/black" />
 
-			</android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-		</android.support.v7.widget.Toolbar>
+        </androidx.appcompat.widget.Toolbar>
 
-	</android.support.design.widget.AppBarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
-	<include
-		layout="@layout/activity_main"/>
+    <include layout="@layout/activity_main" />
 
-</android.support.design.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 

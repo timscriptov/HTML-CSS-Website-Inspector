@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
-	<EditText
-		android:textColorHint="#ffffffff"
-		android:id="@+id/searchTags"
-		android:background="@android:color/transparent"
-		android:layout_width="0.0dip"
-		android:layout_height="match_parent"
-		android:hint="@string/search"
-		android:layout_weight="0.8"
-		android:inputType="textAutoCorrect"
-		android:imeOptions="actionSearch"/>
+    <EditText
+        android:id="@+id/searchTags"
+        android:layout_width="0.0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:background="@android:color/transparent"
+        android:hint="@string/search"
+        android:imeOptions="actionSearch"
+        android:inputType="textAutoCorrect"
+        android:textColorHint="#ffffffff" />
 
 </LinearLayout>
 

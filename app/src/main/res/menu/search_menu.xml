@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<menu
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto">
-	<item
-		android:icon="@drawable/ic_open_in_browser_white_48dp"
-		android:id="@+id/viewInBrowser"
-		android:title="@string/inspectorMode"
-		app:showAsAction="ifRoom" />
-	<item
-		android:icon="@drawable/ic_keyboard_arrow_up_white_48dp"
-		android:id="@+id/up"
-		android:title="@string/up"
-		app:showAsAction="ifRoom" />
-	<item
-		android:icon="@drawable/ic_keyboard_arrow_down_white_48dp"
-		android:id="@+id/down"
-		android:title="@string/down"
-		app:showAsAction="ifRoom" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/viewInBrowser"
+        android:icon="@drawable/ic_open_in_browser_white_48dp"
+        android:title="@string/inspectorMode"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/up"
+        android:icon="@drawable/ic_keyboard_arrow_up_white_48dp"
+        android:title="@string/up"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/down"
+        android:icon="@drawable/ic_keyboard_arrow_down_white_48dp"
+        android:title="@string/down"
+        app:showAsAction="ifRoom" />
 </menu>

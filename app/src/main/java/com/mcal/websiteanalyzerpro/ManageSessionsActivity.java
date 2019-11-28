@@ -1,9 +1,8 @@
 package com.mcal.websiteanalyzerpro;
 
+import android.annotation.SuppressLint;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
@@ -11,11 +10,14 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class ManageSessionsActivity extends AppCompatActivity {
     private SessionAdapter adapter;
@@ -31,11 +33,11 @@ public class ManageSessionsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.manage_sessions_activity);
         manageSessionsActivity = this;
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+        setSupportActionBar(findViewById(R.id.toolbar));
         htmlsourcecode = MainActivity.getHTMLSourceCode();
         url = MainActivity.getUrl();
-        lv = (ListView) findViewById(R.id.manageSessions_list);
-        EditText inputSearch = (EditText) findViewById(R.id.searchTags);
+        lv = findViewById(R.id.manageSessions_list);
+        EditText inputSearch = findViewById(R.id.searchTags);
         sessions = new ArrayList<>();
         titles = new ArrayList<>();
         loadSessions();
@@ -46,9 +48,7 @@ public class ManageSessionsActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
                 tempArrayList.clear();
                 int textlength = cs.length();
-                Iterator it = titles.iterator();
-                while (it.hasNext()) {
-                    String c = (String) it.next();
+                for (String c : titles) {
                     if (textlength <= c.length() && c.toLowerCase().contains(cs.toString().toLowerCase())) {
                         tempArrayList.add(c);
                     }
@@ -75,9 +75,8 @@ public class ManageSessionsActivity extends AppCompatActivity {
         } else {
             sessions = gson.fromJson(json, type);
         }
-        Iterator it = sessions.iterator();
-        while (it.hasNext()) {
-            titles.add(((Session) it.next()).getTitle());
+        for (Session session : sessions) {
+            titles.add((session).getTitle());
         }
     }
 
@@ -86,6 +85,7 @@ public class ManageSessionsActivity extends AppCompatActivity {
         return true;
     }
 
+    @SuppressLint("WrongConstant")
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.saveSession) {

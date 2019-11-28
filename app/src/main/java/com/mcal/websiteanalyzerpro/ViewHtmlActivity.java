@@ -1,25 +1,23 @@
 package com.mcal.websiteanalyzerpro;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.SpannableString;
 import android.text.TextWatcher;
 import android.text.style.BackgroundColorSpan;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ScrollView;
-import android.widget.TextView;
-import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
-import java.util.ArrayList;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import org.jsoup.Jsoup;
+
+import java.util.ArrayList;
 
 public class ViewHtmlActivity extends AppCompatActivity {
     private CharSequence charSequence;
@@ -34,13 +32,14 @@ public class ViewHtmlActivity extends AppCompatActivity {
     private SpannableString str;
     private String word = null;
 
+    @SuppressLint("WrongConstant")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_html);
         foundWords = new ArrayList<>();
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+        setSupportActionBar(findViewById(R.id.toolbar));
         original = getIntent().getStringExtra("original");
-        pageSource = (EditText) findViewById(R.id.pageSource);
+        pageSource = findViewById(R.id.pageSource);
         html = MainActivity.getHTMLSourceCode();
         if (html == null) {
             Toast.makeText(this, "Something went wrong. Please try again. ", 0).show();
@@ -52,34 +51,24 @@ public class ViewHtmlActivity extends AppCompatActivity {
         if (original != null) {
             pageSource.setText(original);
         } else {
-            pageSource.postDelayed(new Runnable() {
-                public void run() {
-                    pageSource.setText(Jsoup.parse(html).toString());
-                }
-            }, 100);
+            pageSource.postDelayed(() -> pageSource.setText(Jsoup.parse(html).toString()), 100);
         }
         pageSource.setSingleLine(false);
-        searchQuery = (EditText) findViewById(R.id.searchfield);
+        searchQuery = findViewById(R.id.searchfield);
         searchQuery.setImeOptions(3);
-        scrollView = (ScrollView) findViewById(R.id.scrollToTarget);
+        scrollView = findViewById(R.id.scrollToTarget);
         setOnActionListener();
-        pageSource.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-                ((InputMethodManager) getSystemService("input_method")).showSoftInput(pageSource, 1);
-            }
-        });
+        pageSource.setOnClickListener(v -> ((InputMethodManager) getSystemService("input_method")).showSoftInput(pageSource, 1));
     }
 
     private void setOnActionListener() {
-        searchQuery.setOnEditorActionListener(new OnEditorActionListener() {
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId != 3) {
-                    return false;
-                }
-                scrollToWord(false);
-                scrollToWord(false);
-                return true;
+        searchQuery.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId != 3) {
+                return false;
             }
+            scrollToWord(false);
+            scrollToWord(false);
+            return true;
         });
         searchQuery.addTextChangedListener(new TextWatcher() {
             public void afterTextChanged(Editable s) {
@@ -110,19 +99,17 @@ public class ViewHtmlActivity extends AppCompatActivity {
                 if (highlight) {
                     str.setSpan(new BackgroundColorSpan(-256), startIndex, searchString.length() + startIndex, 33);
                 } else {
-                    foundWords.add(Integer.valueOf(startIndex));
+                    foundWords.add(startIndex);
                 }
                 startIndex++;
             }
         }
         if (highlight) {
-            runOnUiThread(new Runnable() {
-                public void run() {
-                    try {
-                        pageSource.setText(str);
-                    } catch (IndexOutOfBoundsException ignore) {
-                        System.out.println(ignore.toString());
-                    }
+            runOnUiThread(() -> {
+                try {
+                    pageSource.setText(str);
+                } catch (IndexOutOfBoundsException ignore) {
+                    System.out.println(ignore.toString());
                 }
             });
         }
@@ -133,7 +120,7 @@ public class ViewHtmlActivity extends AppCompatActivity {
             case 16908332:
                 onBackPressed();
                 return true;
-            case R.id.up /*2131623949*/:
+            case R.id.up:
                 if (searchQueryChanged) {
                     currentIndex = 0;
                     foundWords.clear();
@@ -142,14 +129,14 @@ public class ViewHtmlActivity extends AppCompatActivity {
                         public void run() {
                             try {
                                 highLightText(pageSource, word, false);
-                            } catch (IndexOutOfBoundsException e) {
+                            } catch (IndexOutOfBoundsException ignored) {
                             }
                         }
                     }.start();
                 }
                 scrollToWord(true);
                 return true;
-            case R.id.viewInBrowser /*2131624107*/:
+            case R.id.viewInBrowser:
                 if (original == null || html == null) {
                     MainActivity.loadAlteredCode(String.valueOf(pageSource.getText()));
                 } else if (html.contains(original)) {
@@ -158,7 +145,7 @@ public class ViewHtmlActivity extends AppCompatActivity {
                 }
                 finish();
                 return true;
-            case R.id.down /*2131624121*/:
+            case R.id.down:
                 if (searchQueryChanged) {
                     currentIndex = 0;
                     foundWords.clear();
@@ -167,7 +154,7 @@ public class ViewHtmlActivity extends AppCompatActivity {
                         public void run() throws IndexOutOfBoundsException {
                             try {
                                 highLightText(pageSource, word, false);
-                            } catch (IndexOutOfBoundsException e) {
+                            } catch (IndexOutOfBoundsException ignored) {
                             }
                         }
                     }.start();
@@ -189,7 +176,7 @@ public class ViewHtmlActivity extends AppCompatActivity {
             if (currentIndex <= 0 || currentIndex >= foundWords.size()) {
                 currentIndex = 0;
             }
-            scrollView.scrollTo(0, pageSource.getLayout().getLineTop(pageSource.getLayout().getLineForOffset(foundWords.get(currentIndex).intValue())));
+            scrollView.scrollTo(0, pageSource.getLayout().getLineTop(pageSource.getLayout().getLineForOffset(foundWords.get(currentIndex))));
         }
     }
 

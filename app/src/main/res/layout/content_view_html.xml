@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	android:orientation="vertical"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
-	app:layout_behavior="@string/appbar_scrolling_view_behavior">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-	<ScrollView
-		android:id="@+id/scrollToTarget"
-		android:layout_width="fill_parent"
-		android:layout_height="0.0dip"
-		android:layout_weight="1.0">
+    <ScrollView
+        android:id="@+id/scrollToTarget"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
 
-		<EditText
-			android:textColor="@color/primary_text"
-			android:id="@+id/pageSource"
-			android:scrollbars="vertical"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_margin="5.0dip"
-			android:inputType="textMultiLine|textNoSuggestions"
-			android:textIsSelectable="true"
-			android:fontFamily="sans-serif-thin"/>
+        <EditText
+            android:id="@+id/pageSource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:fontFamily="sans-serif-thin"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:scrollbars="vertical"
+            android:textColor="@color/primary_text"
+            android:textIsSelectable="true" />
 
-	</ScrollView>
+    </ScrollView>
 
 </LinearLayout>
 

@@ -20,7 +20,7 @@ class WebsiteAnalyzerWebChromeClient extends WebChromeClient {
     public boolean onConsoleMessage(ConsoleMessage consoleMessage) {
         super.onConsoleMessage(consoleMessage);
         MainActivity.setConsoleText(consoleMessage.message(), context);
-        if (consoleMessage != null && consoleMessage.message().equals("true")) {
+        if (consoleMessage.message().equals("true")) {
             JavaScriptConsoleActivity.finishActivity();
         }
         return true;

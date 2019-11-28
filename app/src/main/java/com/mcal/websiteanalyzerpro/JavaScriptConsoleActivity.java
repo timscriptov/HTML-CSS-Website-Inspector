@@ -1,25 +1,25 @@
 package com.mcal.websiteanalyzerpro;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.Spannable;
 import android.text.style.ForegroundColorSpan;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TextView.BufferType;
-import android.widget.TextView.OnEditorActionListener;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 public class JavaScriptConsoleActivity extends AppCompatActivity {
+    @SuppressLint("StaticFieldLeak")
     private static JavaScriptConsoleActivity activity;
     private String consoleContent = ""/*BuildConfig.FLAVOR*/;
     private EditText consoleInput;
@@ -28,7 +28,7 @@ public class JavaScriptConsoleActivity extends AppCompatActivity {
         public void onReceive(Context context, Intent intent) {
             String finish = intent.getStringExtra("finish");
             if (finish == null) {
-                message = "ffff";
+                String message = "ffff";
                 message = intent.getStringExtra("message");
                 if (message != null) {
                     consoleContent = message + "\n" + consoleContent;
@@ -43,31 +43,34 @@ public class JavaScriptConsoleActivity extends AppCompatActivity {
                     } else {
                         setColor(consoleText, consoleContent, message, Color.parseColor("#cc0000"));
                     }
-                } catch (IndexOutOfBoundsException e) {
+                } catch (IndexOutOfBoundsException ignored) {
                 }
             } else if (finish.equals("finish_activity")) {
                 finish();
             }
         }
     };
-    private String message;
+
+    public static void finishActivity() {
+        if (activity != null) {
+            activity.finish();
+        }
+    }
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_javascript_layout);
-        consoleText = (TextView) findViewById(R.id.consoleText);
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+        consoleText = findViewById(R.id.consoleText);
+        setSupportActionBar(findViewById(R.id.toolbar));
         activity = this;
         LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver, new IntentFilter("sendJavascript"));
-        consoleInput = (EditText) findViewById(R.id.searchfield);
-        consoleInput.setOnEditorActionListener(new OnEditorActionListener() {
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId != 4 || consoleInput.getText() == null) {
-                    return false;
-                }
-                MainActivity.loadJavascript(consoleInput.getText().toString());
-                return true;
+        consoleInput = findViewById(R.id.searchfield);
+        consoleInput.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId != 4 || consoleInput.getText() == null) {
+                return false;
             }
+            MainActivity.loadJavascript(consoleInput.getText().toString());
+            return true;
         });
     }
 
@@ -90,12 +93,6 @@ public class JavaScriptConsoleActivity extends AppCompatActivity {
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
-        }
-    }
-
-    public static void finishActivity() {
-        if (activity != null) {
-            activity.finish();
         }
     }
 
